@@ -4,7 +4,7 @@
 </script>
 
 <div class="bg-zinc-900">
-  <ul class="grid w-full grid-cols-2 lg:grid-cols-6 gap-2 p-2">
+  <ul class="grid w-full grid-cols-2 lg:grid-cols-3 gap-2 p-2">
     {#each numeros as numero}
       <Numero {numero} />
     {/each}
