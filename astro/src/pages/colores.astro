@@ -1,13 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Colores from "../templates/Colores.svelte";
+
+let PROJECT_ID = "ybtc4em1";
+let DATASET = "production";
+let QUERY = encodeURIComponent('*[_type == "colour"]');
+
+let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+
+const response = await fetch(URL);
+const data = await response.json();
+const colors = data.result;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Colores">
   <main>
-    <h1>Colores</h1>
+    <Colores colors={colors} client:visible />
   </main>
 </Layout>
-
-<style>
-
-</style>

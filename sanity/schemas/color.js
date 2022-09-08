@@ -1,5 +1,5 @@
 export default {
-  name: 'color',
+  name: 'colour',
   type: 'document',
 	title: 'Color',
   fields: [
@@ -12,6 +12,16 @@ export default {
       name: 'translation',
       type: 'string',
       title: 'Translation'
+    },
+    {
+      name: 'color',
+      title: 'Color',
+      type: 'color'
+    },
+    {
+      name: 'text_color',
+      title: 'Text color',
+      type: 'color'
     }
   ]
 }
